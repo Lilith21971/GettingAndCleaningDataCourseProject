@@ -6,7 +6,7 @@ The purpose of the project is to demonstrate ability to collect, work with, and 
 The project consists on preparing a tidy data set for the "Human Activity Recognition Using Smartphones Data Set", generating a second tidy data set with variables means and providing a code book.
 
 Files in this repository:  
-run_analysis.R - R script that performs the data preparation.
+run_analysis.R - R script that performs the data preparation and generates the tidy data set.
 
 CodeBook.pdf - Code Book containing information on the raw data used, the steps performed by the run_analysis.R script to prepare the final tidy data set and a list of variables in the tidy data set.
 
