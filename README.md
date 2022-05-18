@@ -18,4 +18,4 @@ FinalData.txt - final tidy data set as a text file; to read it in R, after downl
 Dimensions (wide form): 180 rows, 88 columns.  
 All variables in the final data set, except Subject and Activity, refer to group means, i.e. they are feature measurement averages within the pair of Subject and Activity.
 
-** Please see the Code Book (CodeBook.html) for more information.
+** Please see the Code Book (CodeBook.pdf or CodeBook.html) for more information.
