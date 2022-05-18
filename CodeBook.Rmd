@@ -1,0 +1,73 @@
+---
+title: "Code Book"
+author: "Lilith21971"
+date: "5/17/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Introduction
+
+This code book was created as part of the *Coursera/ Johns Hopkins University “Getting and Cleaning Data” Course Project*.
+
+The purpose of the project is to demonstrate ability to collect, work with, and clean a data set.
+
+The project consists on preparing a tidy data set for the **“Human Activity Recognition Using Smartphones Data Set”**, generating a second tidy data set with variables means and providing this code book.
+
+The *run_analysis.R* script available in my GitHub repository (where you found this code book) performs the data preparation.
+
+
+### Raw data
+
+The “Human Activity Recognition Using Smartphones Data Set” presents data collected from features of Samsung Galaxy S smartphones in an experiment carried out with a group of 30 volunteers.
+
+A broader description is available at:
+[RawDataSetInformation](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+
+The raw data used in the course project can be downloaded here: 
+[RawData](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+
+
+### Actions performed to prepare the final tidy data set
+
+Given the course project instructions, the *run_analysis.R* script performs the following steps:  
+1. Downloads the raw data set  
+2. Loads the data into R  
+3. Merges the training and the test sets  
+4. Extracts a subset containing only the measurements on the mean and standard deviation for each feature variable  
+5. Uses descriptive activity names to name the activities in the merged data set  
+6. Labels the data set with descriptive variable names  
+      *- Uses capital letter at the beginning of words present in the names*  
+      *- Replaces less intuitive abbreviations by extended words*  
+      *- Deletes special characters*  
+      *- Reorders parts of the names*  
+7. Creates a second, independent, tidy data set with the average of each (feature measurement) variable within each pair of subject and activity  
+
+Note: The *run_analysis.R* script includes various comments explaining the commands used.
+
+
+### Tidy data
+
+The final tidy data set is available in my GitHub repository as a text file *(FinalData.txt)*. To read it in R, after downloading it and properly addressing its path, run: read.table(“path/FinalData.txt”, header = TRUE).
+
+**Dimensions (wide form):** 180 rows, 88 columns.
+
+**Variables description:** All variables in the list below, except Subject and Activity, refer to group means, i.e. they are feature measurement averages within the pair of Subject and Activity.
+
+
+```{r list_of_variables, echo=FALSE, warning=FALSE}
+#library(rmarkdown)
+#library(knitr)
+library(xlsx)
+library(kableExtra)
+
+data <- read.xlsx("D:/Treinamento/CursosR/GettingAndCleaningData/Week4/scripts/Course_Project/Variables_list.xlsx", sheetIndex=1, header = TRUE) 
+
+data %>% kable(caption='<b>List of Variables</b>', align=c("r", "l", "l", "l")) %>%
+        kable_paper(fixed_thead=T) %>%
+        footnote(general="All variables, except Subject and Activity, refer to group means, i.e. they are feature measurement averages within the pair of Subject and Activity.")
+```
+
