@@ -10,7 +10,7 @@ run_analysis.R - R script that performs the data preparation.
 
 CodeBook.pdf - Code Book containing information on the raw data used, the steps performed by the run_analysis.R script to prepare the final tidy data set and a list of variables in the tidy data set.
 
-CodeBook.html - Same as above, in html format. If GitHub doesn't show the rendered formatted html, it can be viewed here: https://raw.githack.com/#:~:text=https%3A//rawcdn.githack.com/Lilith21971/GettingAndCleaningDataCourseProject/45d54daab26f8cad656354fae3f25b21d72857c9/CodeBook.html
+CodeBook.html - Same as above, in html format. If GitHub doesn't show the rendered formatted html, it can be viewed here: https://rawcdn.githack.com/Lilith21971/GettingAndCleaningDataCourseProject/2e374c565918578550aa80fab87ef9bd18d2afce/CodeBook.html
 
 CodeBook.Rmd - R Markdown script used to generate the CodeBook.html file.
 
